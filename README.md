@@ -76,7 +76,7 @@ Es recomendable utilizar Postman para realizar las pruebas.
   Debes agregar el parámetro access-token al body con su correspondiente valor
   ```
 
-  Obtiene una de sucursal dado su codigo
+  Obtiene una sucursal dado su codigo
   ``` 
   http://localhost:5000/api/sucursal/350
 
@@ -102,11 +102,3 @@ Es recomendable utilizar Postman para realizar las pruebas.
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c"   
   }
   ```
-
-
-
-
-
-
-
-
