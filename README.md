@@ -39,9 +39,26 @@
   
 - winston-daily-rotate-file
 
-  transporte para Winston que se registra en un archivo giratorio. Los registros se pueden rotar según una fecha, un límite de tamaño y los registros antiguos se pueden eliminar según el recuento o los días transcurridos.
+  Permite registrar archivos giratorios. Los registros se pueden rotar según una fecha, un límite de tamaño y los registros   antiguos se pueden eliminar según el recuento o los días transcurridos.
 
   ```
   $ npm install winston-daily-rotate-file
   ```
 
+- cors
+
+  Permite las solicitudes de origenes cruzados entre dominios.
+ 
+  ```
+  $ npm install cors
+  ```
+ 
+- jsonwebtoken
+ 
+  Permite proteger el acceso a la API mediante un token.
+ 
+  ```
+  $ npm install jsonwebtoken
+  ```
+ 
+ 
