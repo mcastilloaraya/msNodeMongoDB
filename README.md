@@ -62,3 +62,51 @@
   ```
  
  
+#### Ejemplo de Uso
+
+Es recomendable utilizar Postman para realizar las pruebas.
+
+- Metodos GET
+
+
+  Obtiene una lista de sucursales 
+  ``` 
+  http://localhost:5000/api/sucursal/
+
+  Debes agregar el parámetro access-token al body con su correspondiente valor
+  ```
+
+  Obtiene una de sucursal dado su codigo
+  ``` 
+  http://localhost:5000/api/sucursal/350
+
+  Debes agregar el parámetro access-token al body con su correspondiente valor
+  ```
+
+- Metodos POST
+
+  Metodo para autenticar un usuario y obtener un token para el uso de la API
+  ```
+  http://localhost:5000/autenticar
+
+  Se debe agregar los siguientes parámetros al body en formato json
+  {
+    "usuario": "mca",
+    "contrasena": "123"
+  } 
+
+  como respuesta devolverá un token
+
+  {
+    "mensaje": "Autenticación correcta",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c"   
+  }
+  ```
+
+
+
+
+
+
+
+
