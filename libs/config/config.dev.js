@@ -9,7 +9,7 @@ config.dbPort = process.env.dbPort || '27017';
 config.dbName = process.env.dbName || 'kiberapp-db';
 config.serverPort = process.env.serverPort || 5000;
 
-//config.secret = 'supersecret';
+config.secret = 'supersecret';
 config.database_url_dev = 'mongodb://127.0.0.1:27017/'+config.dbName;
 
 
