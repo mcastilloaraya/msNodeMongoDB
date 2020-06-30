@@ -7,9 +7,9 @@
 
 - body-parser
   
-  Permite acceder al cuerpo de una petición cuando se utiliza el metodo POST.
+  Permite acceder al cuerpo de una petición cuando se utiliza el método POST.
   
-  Como realizar la instalación de la libreria body-parser?
+  Como realizar la instalación de la librería body-parser?
   ```
   $ npm install body-parser
   ```
@@ -39,7 +39,7 @@
   
 - winston-daily-rotate-file
 
-  Permite registrar archivos giratorios. Los registros se pueden rotar según una fecha, un límite de tamaño y los registros   antiguos se pueden eliminar según el recuento o los días transcurridos.
+  Permite registrar archivos giratorios. Los registros se pueden rotar según una fecha, un límite de tamaño y los registros antiguos se pueden eliminar según el recuento o los días transcurridos.
 
   ```
   $ npm install winston-daily-rotate-file
@@ -68,37 +68,64 @@ Es recomendable utilizar Postman para realizar las pruebas.
 
 - Metodos GET
 
+  - Obtiene una lista de sucursales 
+    ```
+    http://localhost:5000/api/sucursal/
+    ```
+    Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    ```
+    KEY   = access-token
+    VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
+    ```
 
-  Obtiene una lista de sucursales 
-  ``` 
-  http://localhost:5000/api/sucursal/
-
-  Debes agregar el parámetro access-token al body con su correspondiente valor
-  ```
-
-  Obtiene una sucursal dado su codigo
-  ``` 
-  http://localhost:5000/api/sucursal/350
-
-  Debes agregar el parámetro access-token al body con su correspondiente valor
-  ```
+  - Obtiene una sucursal dado su código
+    ``` 
+    http://localhost:5000/api/sucursal/350
+    ```
+    Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    ```
+    KEY   = access-token
+    VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
+    ```
 
 - Metodos POST
 
-  Metodo para autenticar un usuario y obtener un token para el uso de la API
-  ```
-  http://localhost:5000/autenticar
-
-  Se debe agregar los siguientes parámetros al body en formato json
-  {
-    "usuario": "mca",
-    "contrasena": "123"
-  } 
-
-  como respuesta devolverá un token
-
-  {
-    "mensaje": "Autenticación correcta",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c"   
-  }
-  ```
+   - Método para autenticar un usuario y obtener un token para el uso de la API
+    ```
+    http://localhost:5000/autenticar
+    ```
+    Se debe agregar los siguientes parámetros al body en formato json
+    ```json
+    {
+      "usuario": "mca",
+      "contrasena": "123"
+    } 
+    ```
+    como respuesta devolverá un token
+    ```json
+    {
+      "mensaje": "Autenticación correcta",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c"   
+    }
+    ```
+  
+  - Método para agregar un nuevo registro a la colección
+    ```
+    http://localhost:5000/api/sucursal
+    ```
+    Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    ```
+    KEY   = access-token
+    VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
+    ```
+  
+    Se debe agregar los siguientes parámetros al body en formato json
+    ```json
+    {
+      "codigo": 355,
+      "nombre": "SAN MIGUEL",
+      "estado": "1"
+    } 
+    ```
+  
+  
