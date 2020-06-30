@@ -94,6 +94,31 @@ Es recomendable utilizar Postman para realizar las pruebas.
     VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
     ```
 
+  - Método para eliminar un registro de la colección
+    
+    ```
+    http://localhost:5000/api/delsucursal/2
+    ```
+    
+    Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    
+    ```
+    KEY   = access-token
+    VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
+    ```
+  
+    Respuesta Exitosa
+    
+    ```json
+    {
+      "n": 1,
+      "ok": 1,
+      "deletedCount": 1
+    } 
+    ```
+
+
+
 - Metodos POST
 
    - Método para autenticar un usuario y obtener un token para el uso de la API
@@ -142,11 +167,11 @@ Es recomendable utilizar Postman para realizar las pruebas.
       "estado": "1"
     } 
     ```
-    
-  - Método para eliminar un nuevo registro de la colección
+  
+  - Método para modificar un registro de la colección
     
     ```
-    http://localhost:5000/api/delsucursal/2
+    http://localhost:5000/api/upsucursal
     ```
     
     Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
@@ -156,14 +181,15 @@ Es recomendable utilizar Postman para realizar las pruebas.
     VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
     ```
   
-    Respuesta Exitosa
+    Agregar los siguientes parámetros al body en formato json
     
     ```json
     {
-      "n": 1,
-      "ok": 1,
-      "deletedCount": 1
+      "codigo": 355,
+      "nombre": "SAN MIGUEL",
+      "estado": "1"
     } 
     ```
+  
   
   
