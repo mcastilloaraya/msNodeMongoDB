@@ -68,21 +68,27 @@ Es recomendable utilizar Postman para realizar las pruebas.
 
 - Metodos GET
 
-  - Obtiene una lista de sucursales 
+  - Obtiene una lista de sucursales
+  
     ```
     http://localhost:5000/api/sucursal/
     ```
+    
     Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    
     ```
     KEY   = access-token
     VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
     ```
 
   - Obtiene una sucursal dado su código
+  
     ``` 
     http://localhost:5000/api/sucursal/350
     ```
+    
     Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    
     ```
     KEY   = access-token
     VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
@@ -91,35 +97,44 @@ Es recomendable utilizar Postman para realizar las pruebas.
 - Metodos POST
 
    - Método para autenticar un usuario y obtener un token para el uso de la API
-    ```
-    http://localhost:5000/autenticar
-    ```
-    Se debe agregar los siguientes parámetros al body en formato json
-    ```json
-    {
-      "usuario": "mca",
-      "contrasena": "123"
-    } 
-    ```
-    como respuesta devolverá un token
-    ```json
-    {
-      "mensaje": "Autenticación correcta",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c"   
-    }
-    ```
+   
+     ```
+     http://localhost:5000/autenticar
+     ```
+    
+     Se debe agregar los siguientes parámetros al body en formato json
+    
+     ```json
+     {
+       "usuario": "mca",
+       "contrasena": "123"
+     } 
+     ```
+    
+     como respuesta devolverá un token
+    
+     ```json
+     {
+       "mensaje": "Autenticación correcta",
+       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c"   
+     }
+     ```
   
   - Método para agregar un nuevo registro a la colección
+    
     ```
     http://localhost:5000/api/sucursal
     ```
+    
     Agregar el parámetro **access-token** al *Headers* con su correspondiente valor
+    
     ```
     KEY   = access-token
     VALUE = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTkzNDYxOTA1LCJleHAiOjE1OTM0NjMzNDV9.7SHReWejZBOPVU9rNUaqNN0HeHUY2GfokSULVkBj42c
     ```
   
     Se debe agregar los siguientes parámetros al body en formato json
+    
     ```json
     {
       "codigo": 355,
